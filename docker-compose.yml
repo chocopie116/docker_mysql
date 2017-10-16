@@ -1,8 +1,26 @@
-mysql:
+mysql_8.0.3:
   image: mysql:8.0.3
   volumes:
     - /var/lib/docker_mysql/8.0.3/:/var/lib/mysql
   ports:
     - "13380:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: pass
+
+mysql_5.7.9:
+  image: mysql:5.7.9
+  volumes:
+    - /var/lib/docker_mysql/5.7.9/:/var/lib/mysql
+  ports:
+    - "13357:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: pass
+
+mysql_5.6.37:
+  image: mysql:5.6.37
+  volumes:
+    - /var/lib/docker_mysql/5.6.37/:/var/lib/mysql
+  ports:
+    - "13356:3306"
   environment:
     MYSQL_ROOT_PASSWORD: pass

@@ -15,6 +15,9 @@ down:
 logs:
 	sudo bin/docker-compose logs -f
 
+port:
+	sudo bin/docker-compose port all
+
 conn:
 	mysql -h 127.0.0.1 -P 13380 -u root -ppass
 
