@@ -6,6 +6,9 @@ setup:
 	sudo mkdir -p /var/lib/docker_mysql/
 	sudo mkdir -p /var/lib/docker_mysql/$(VERSION)
 
+build:
+	sudo bin/docker-compose build
+
 up:
 	sudo bin/docker-compose up -d
 
@@ -23,3 +26,7 @@ conn:
 
 clean:
 	sudo rm -rf /var/lib/docker_mysql/$(VERSION)
+
+test/redis:
+	echo "SET tsuchida sugukonai" | redis-cli -p 16304
+	echo "GET tsuchida" | redis-cli -p 16304
