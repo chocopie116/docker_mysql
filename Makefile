@@ -31,3 +31,8 @@ clean:
 test/redis:
 	echo "SET tsuchida sugukonai" | redis-cli -p 16304
 	echo "GET tsuchida" | redis-cli -p 16304
+
+
+_install/redis-cli:
+	sudo apt-get install redis-tools
+
